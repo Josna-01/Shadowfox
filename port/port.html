@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Amisha</title>
+    <link rel="stylesheet" href="port.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#project">Projects</a></li>
+                    <li><a href="#certificates">Certificates</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h1>Hi, I'm <span>Amisha</span></h1>
+                <p class="sub-heading">CSE Undergrad | Passionate About Exploring Web Development & Cloud Technologies</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ------------ About ------------ -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="image/p_image.jpg" alt="Profile">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>  
+                    <p>I'm a second-year Computer Science Engineering student at St. Joseph Engineering College, Mangalore. I'm passionate about learning and exploring the world of Web Development and Cloud Technologies. I enjoy building user-friendly interfaces and understanding how things work behind the scenes. I'm continuously learning and applying new skills through personal projects, workshops, and online courses.</p>    
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                            <li><span>HTML</span><br>Proficient in structuring web pages with semantic HTML</li>
+                            <li><span>CSS</span><br>Good understanding of styling, layout techniques (Flexbox, Grid), and responsiveness</li>
+                            <li><span>JavaScript</span><br>Basic interactive web elements and DOM manipulation</li>
+                            <li><span>Python</span><br>Basic scripting, automation, and data manipulation</li>
+                            <li><span>Java</span><br>Basic object-oriented programming concepts</li>
+                            <li><span>MySQL</span><br>Basic database queries, CRUD operations, and database design</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span>present</span><br>Attended workshops on python , automation </li>
+                            <li><span>2024</span><br>Working on personal projects like Curahub and Fake News Detector</li>
+                            <li><span>Learning by Doing</span><br>Hands-on practice through online courses and self-study</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>2023 - Present</span><br>Currently pursuing B.E. in Computer Science Engineering<br>St. Joseph Engineering College, Mangalore</li>
+                            <li><span>2020 - 2022</span><br>Completed 2nd PUC with 90%<br>St. Agnes PU College, Mangalore</li>
+                            <li><span>2019 - 2020</span><br>Completed SSLC with 90%<br>St. Sebastian School</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------ Projects Section ------------ -->
+    <div id="project">
+        <div class="container">
+            <h1 class="sub-title">Projects</h1>
+            <div class="project-list">
+                <div class="project">
+                    <img src="image/fake_news.jpg" alt="Fake News Project">
+                </div>
+                <div class="project">
+                    <img src="image/curahub.jpg" alt="Curahub Project">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------ Certificates ------------ -->
+    <div id="certificates">
+        <div class="container">
+            <h1 class="sub-title">Certificates</h1>
+            <ul>
+                <li>Front-End Development - Coursera</li>
+                <li>Python for Beginners - Udemy</li>
+                <li>Cloud Computing Basics - IBM SkillsBuild</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ------------ Currently Learning ------------ -->
+    <div id="learning">
+        <div class="container">
+            <h1 class="sub-title">Currently Learning</h1>
+            <ul>
+                <li>ReactJS and Tailwind CSS</li>
+                <li>MySQL and DBMS Concepts</li>
+                <li>Cloud Computing (Basics)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ------------ Contact Section ------------ -->
+    <div id="contact">
+        <div class="container">
+            <h1 class="sub-title">Contact Me</h1>
+            <ul class="contact-list">
+                <li>
+                    <a href="https://www.linkedin.com/in/amisha-josna-dsouza-8064042b7/" target="_blank">
+                        <i class="fa-brands fa-linkedin contact-icon"></i>
+                        LinkedIn
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/Josna-01" target="_blank">
+                        <i class="fa-brands fa-github contact-icon"></i>
+                        GitHub
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:amishajosnadsouza.1@gmail.com">
+                        <i class="fa-solid fa-envelope contact-icon"></i>
+                        amishajosnadsouza.1@gmail.com
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- JavaScript for Tabs -->
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
