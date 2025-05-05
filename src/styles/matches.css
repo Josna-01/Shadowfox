@@ -1,0 +1,253 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensure the body fills the full height */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+  
+ /* Main container */
+.container {
+    width: 100%; /* Ensure it takes the full width of the body */
+    height: 100%; /* Make container fill the full height */
+    margin: 0; /* Remove margins */
+    padding: 20px; /* Padding inside the container */
+    background-color: #fff; /* White background for the content */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position: relative; /* Prevent extra space behind it */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensure proper distribution of space inside the container */
+    overflow: hidden; /* Hide any overflow */
+  }
+  /* Page heading */
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 60px;
+  }
+  
+  /* Filters section */
+  .filters {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  .filters input,
+  .filters select {
+    flex: 1;
+    min-width: 180px;
+    padding: 10px;
+    margin-right: 40px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  /* Match cards container */
+  .matches-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Individual match card */
+  .match-card {
+    background-color: #fafafa;
+    padding: 20px;
+    border: 1px solid #a70e0e;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px; 
+    margin-right: 40px; /* Adjusted to prevent overflow */
+    /* margin: 10px 0; */
+  }
+  
+  .match-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .match-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .match-card p {
+    margin: 5px 0;
+    font-size: 15px;
+    color: #555;
+  }
+  
+  /* Match card content (layout adjustments) */
+  .match-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .match-card-header h3 {
+    margin: 0;
+  }
+  
+  .match-card-header .match-status {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .match-card-footer {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .match-card-footer p {
+    margin: 0;
+    font-size: 14px;
+    color: #888;
+  }
+  
+  /* Result status (time vs result) */
+  .result-status {
+    font-weight: bold;
+    font-size: 16px;
+    color: #d71920; /* RCB red */
+  }
+  
+  /* Button styling */
+  button {
+    padding: 10px 16px;
+    background-color: #d71920; /* RCB red */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #a21518;
+  }
+  
+  button:focus {
+    outline: 2px solid #a21518;
+    outline-offset: 2px;
+  }
+  
+  /* Mobile responsive design */
+  @media (max-width: 600px) {
+    .filters {
+      flex-direction: column;
+    }
+  
+    .match-card {
+      padding: 15px;
+    }
+  
+    .match-card-footer {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  
+  /* -------Logo------- */
+  /* Logo styling */
+  .team-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .team-data {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .team-name {
+    font-weight: bold;
+  }
+  
+  .team-score {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .team-logo {
+    width: 40px;
+    height: 60px;
+    object-fit: contain;
+    margin-top: 10px;
+    margin-left: 450px; /* Aligns text horizontally */
+    margin-right: 5px; /* Aligns text horizontally */
+  }
+  
+  /* -------Match Header------- */
+  .match-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    padding: 8px 12px;
+    background-color: #d3ba4d;
+    border-bottom: 1px solid #d94949;
+    margin-bottom: 10px;
+  }
+  
+  .match-title {
+    font-size: 16px;
+  }
+  
+  .match-date {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  /* -------Result Status------- */
+  .match-result {
+    margin-top: 10px; /* Adds space above */
+    font-weight: 500;
+    color: #444;
+  }
+  
+  /* ------VS------- */
+  .horizontal-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .vs-team-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+    margin-top: 10px; /* Adds space above */
+    
+  }
+  
+.vs {
+  font-size: 15px; /* Adjust font size */
+  margin-right: 10px;
+  margin-left: 480px; /* Aligns text horizontally */
+  font-weight: bold;
+  color: #000; /* Optional: change color */
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px; /* Optional: add some space below */
+  font-family: 'Arial', sans-serif; /* Optional: change font family */
+}
+  

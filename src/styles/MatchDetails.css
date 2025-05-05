@@ -1,0 +1,217 @@
+.match-details-page {
+  padding: 40px;
+  background: linear-gradient(135deg, #143bae, #d62323);
+  border-radius: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1200px;
+  margin: 20px auto;
+  box-shadow: 0 6px 20px rgba(5, 2, 2, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.match-details-page:hover {
+  transform: scale(1.02);
+}
+
+.match-details-page h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  color: #fcfcfc;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-family: espinosa;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+.match-details-page p {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.match-details-team-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  padding: 20px;
+}
+
+.match-details-team {
+  text-align: center;
+  margin: 0 30px;
+
+}
+
+.match-details-team-logo {
+  width: 70px;
+  height: 100px;
+  margin-bottom: 15px;
+}
+
+.match-details-vs {
+  font-size: 4rem;
+  /* font-weight: bold; */
+  color: #ffffff;
+
+  margin: 0 20px;
+  text-transform: uppercase;
+  font-family: 'Arial', sans-serif;
+  transition: transform 0.3s ease;
+}
+
+.match-details-vs:hover {
+  transform: scale(1.1);
+}
+
+.match-details-result,
+.match-details-player-of-the-match,
+.match-details-match-highlights,
+.match-details-scorecard {
+  margin-top: 40px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.match-details-result h2,
+.match-details-player-of-the-match h3,
+.match-details-match-highlights h3,
+.match-details-scorecard h3 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.match-details-result p,
+.match-details-player-of-the-match p,
+.match-details-match-highlights ul {
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.match-details-match-highlights {
+  display: flex;
+  flex-direction: column;
+}
+
+.match-details-match-highlights .highlight-item {
+  margin-bottom: 20px;
+}
+
+.match-details-match-highlights .highlight-item img,
+.match-details-match-highlights .highlight-item video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.match-details-match-highlights ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.match-details-match-highlights ul li {
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  color: #444;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+  transition: color 0.3s ease;
+}
+
+.match-details-match-highlights ul li:hover {
+  color: #ff6f61;
+}
+
+.match-details-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.match-details-table,
+.match-details-th,
+.match-details-td {
+  border: 1px solid #ddd;
+}
+
+.match-details-th,
+.match-details-td {
+  padding: 15px;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.match-details-th {
+  background-color: #ff6f61;
+  color: #fff;
+  font-weight: 600;
+}
+
+.match-details-td {
+  background-color: #fafafa;
+  color: #555;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.match-details-td:hover {
+  background-color: #f1f1f1;
+  color: #ff6f61;
+}
+
+@media (max-width: 768px) {
+  .match-details-team-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .match-details-team-logo {
+    margin-bottom: 10px;
+    width: 75px;
+    height: 80px;
+  }
+
+  .match-details-table,
+  .match-details-th,
+  .match-details-td {
+    font-size: 0.95rem;
+  }
+
+  .match-details-page {
+    padding: 30px;
+  }
+}
+
+
+
+
+
+.match-details-match-highlights {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.highlight-media-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  gap: 16px; /* Add controlled spacing between items */
+}
+
+.highlight-image,
+.highlight-video {
+  display: flex;
+  justify-content: center;
+}

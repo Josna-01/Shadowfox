@@ -1,0 +1,228 @@
+/* Team Page Background */
+.team-page {
+  background-image: "url('/images/rcb_logo.png')";
+  background-size: cover;  /* Ensures the image covers the entire background */
+  background-position: center;  /* Centers the image */
+  background-repeat: no-repeat;  /* Prevents the image from repeating */
+  height: 100vh;  /* Makes the background cover the entire height of the page */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Optionally center content vertically */
+  align-items: center; /* Optionally center content horizontally */
+}
+
+/* -------Player Card Styles------- */
+/* Common player image styling */
+.player-img {
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Player Card Styling */
+.player-card {
+  position: relative;
+  display: inline-block;
+  width: 180px;
+  margin: 20px;
+  text-align: center;
+  border: 1px solid #b71010;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #ffffffd4;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, height 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+  height: 230px; /* Default height */
+}
+
+.player-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  height: 280px; /* Expanded height on hover */
+  z-index: 10;
+}
+
+.player-card .player-img {
+  width: 130px;
+  height: 150px;
+  border-radius: 0;
+  /* border: 2px solid rgb(81, 0, 27); */
+}
+
+.player-card h3 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #a80000;
+}
+
+.player-card h5 {
+  margin-top: 4px;
+  font-size: 12px;
+  font-weight: 400;
+color: #a80000;
+}
+/* -----end of player card style------ */
+
+
+/* Player Role Icons */
+.player-icons {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  display: flex;
+  justify-content: space-between;  /* Distribute icons */
+  gap: 4px;
+}
+
+/* Group the first two icons together */
+.left-icons {
+  display: flex;
+  gap: 4px;
+}
+
+.right-icons {
+  margin-left: auto;  /* Push this div to the right */
+}
+
+
+.player-sticker {
+  width: 20px;
+  height: 20px;
+}
+
+/* ------end of player card icon------- */
+
+/* Container for Player Cards (Grid) */
+.team_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+}
+
+/* Description hidden by default */
+.player-description {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #fff;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+/* Reveal description on hover */
+.player-card:hover .player-description {
+  opacity: 1;
+  max-height: 100px;
+}
+
+/* ------end of Player Card Styles------ */
+
+/* --------player details page styles-------- */
+.player-details-page {
+  display: flex;
+  padding: 2rem;
+  background-color: #ffffff; /* Optional background color for the page */
+}
+
+.player-left {
+  flex: 1;
+  text-align: center;
+  padding-right: 2rem; /* Space between left and right */
+}
+
+.player-name {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  margin-top: 4rem;
+}
+
+.player-image-wrapper {
+  /* background-image: "url(${bgImage})";  Your background image path */
+  background-size: cover;
+  background-position: center;
+  padding: 10px; /* Optional: adds space between bg and image */
+  display: inline-block;
+  border-radius: 8px;
+}
+
+.player-img-info {
+  width: 380px;
+  height: 440px;
+  border-radius: 8px;
+  display: block;
+}
+
+.player-right {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.player-right h2 {
+  margin-bottom: 0.5rem;
+}
+
+.player-right p {
+  margin: 0.3rem 0;
+}
+
+/* ----about player details page styles--------  */
+.about-player {
+  background-color: #f5f5f5;  /* Light background for contrast */
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  margin-top: 10rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional subtle shadow */
+}
+.about-player h2 {
+  font-size: 1.5rem;
+  color: #cc0000; /* RCB red or choose your theme color */
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid #cc0000;
+  padding-bottom: 0.5rem;
+}
+
+/* -----personal details styles------  */
+.player-section {
+  text-align: left;
+  background-color: #f9f9f9;        /* Light grey background */
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  margin-bottom: 1.5rem;           /* Space below each section */
+}
+
+.player-section h2 {
+  font-size: 1.5rem;
+  color: #cc0000;                  /* RCB red or choose your theme color */
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #cc0000;
+  padding-bottom: 0.5rem;
+}
+
+.player-section p, 
+.player-section li {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0.3rem 0;
+  
+}
+
+.player-section ul {
+  list-style: none;
+  padding-left: 0; /* Removes default left padding */
+  margin: 0; /* Optional: remove margin if you want it tighter */
+}
+

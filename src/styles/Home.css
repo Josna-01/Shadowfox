@@ -1,0 +1,64 @@
+.hero-title{
+    color: aliceblue;
+    font-weight: 100;
+    font-size: 100;
+    font-weight: bold;
+    
+}
+.hero-tagline{
+    color: rgb(222, 197, 32);
+}
+/* Upcoming Matches Section */
+.upcoming-matches {
+    background-image: url('https://akm-img-a-in.tosshub.com/indiatoday/images/story/202405/m-chinnaswamy-stadium-in-bengaluru-214624648-16x9.jpg?VersionId=OMbIjBeLKB8gL9gT28wXy_OHA5tfHMRI');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+    padding: 0 20px;
+    height: 100%;
+}
+
+/* Box for Content inside Upcoming Matches */
+.upcoming-matches-box {
+    background-color: rgba(227, 24, 24, 0.5);
+    backdrop-filter: blur(6px);
+    border-radius: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 800px;  /* Limit the width of the box */
+    margin: 0 auto;    /* Center the box horizontally */
+    box-sizing: border-box;
+    display: flex;     /* Make the box a flex container */
+    flex-direction: column;  /* Stack the content vertically */
+    align-items: center;  /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+}
+
+/* Dark Overlay for Upcoming Matches */
+.upcoming-matches::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);  /* Adjusted for contrast */
+    z-index: 1;
+}
+
+/* Center the Match Date and Team Logos */
+.upcoming-matches-list {
+    display: flex;
+    flex-direction: column; /* Stack the match items vertically */
+    align-items: center;    /* Center all items horizontally */
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
